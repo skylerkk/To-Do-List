@@ -8,6 +8,7 @@ class ListTopButtons extends React.Component {
 
     render() {
         return (
+            // Make a button that cahgnes the page
             <div className='mx-auto pb-4 text-center'>
                 <button
                     className='btn btn-primary'

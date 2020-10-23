@@ -6,6 +6,8 @@ class ListBottomButtons extends React.Component {
         super(props);
     }
 
+
+    //change all done values to true
     markDone() {
         let copy = this.props.toDoList;
         copy.map((item) => {
@@ -14,6 +16,7 @@ class ListBottomButtons extends React.Component {
         this.props.update(copy);
     }
 
+    //reset all done values to false
     resetCheck() {
         let copy = this.props.toDoList;
         copy.map((item) => {
@@ -22,6 +25,7 @@ class ListBottomButtons extends React.Component {
         this.props.update(copy);
     }
 
+    //checks all done in the list then deletes them
     deleteDone() {
         let copy = this.props.toDoList;
         for (let i = 0; i < copy.length; i++) {
@@ -35,6 +39,8 @@ class ListBottomButtons extends React.Component {
 
     render() {
         return (
+            //Display number of taks
+            //All the bottom buttons with their onClick functions defined above
             <div>
                 <div className='pt-3'>
                     <h4 className='text-center'>Number of Task: {this.props.toDoList.length}</h4>

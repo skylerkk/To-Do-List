@@ -6,12 +6,14 @@ class ListItems extends React.Component {
         super(props);
     }
 
+    //Reverse the done value and call update
     handleCheck(index) {
         let copy = this.props.toDoList
         copy[index].done = !copy[index].done;
         this.props.update(copy);
     }
 
+    //if this is click then delete this from the array and call update
     handleDelete(index) {
         let copy = this.props.toDoList;
         copy.splice(index, 1);
@@ -24,6 +26,10 @@ class ListItems extends React.Component {
 
     render() {
         return (
+            //depending on the page swap between each thing
+            //map through each list item and have a input field with a checkBox
+            //display the name of the ToDo
+            //Add the delete button
             <ul className='list-group mx-auto'>
                 {this.props.toDoList.map((item, index) => {
                     if (this.props.pageNum === 0) {
